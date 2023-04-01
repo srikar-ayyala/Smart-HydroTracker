@@ -1,0 +1,10 @@
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+}
+
+h1 {
+    font-size: 9rem;
+}
