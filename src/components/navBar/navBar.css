@@ -1,13 +1,16 @@
 nav {
     display: flex;
-    height: 50px;
+    height: 70px;
     justify-content: space-between;
+    background-color: var(--Main2-color);
+    padding: 8px;
 }
 
 .nav-links {
     display: flex;
     gap: 50px;
     align-content: center;
+    margin-inline: 10px;
 }
 
 .nav-link {
@@ -16,5 +19,11 @@ nav {
 
 a {
     text-decoration: none;
-    color: var(--Accent1-color);
+    font-size: 1.4rem;
+    color: white;
+    /* color: var(--Accent2-color); */
+}
+
+img {
+    height: 100%;
 }
