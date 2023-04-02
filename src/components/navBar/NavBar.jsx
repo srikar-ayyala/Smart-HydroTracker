@@ -1,14 +1,14 @@
-import logoPath from '../../../public/logo.png'
+import logoPath from '../../images/logo.png'
 import './navBar.css'
-export default function NavBar() {
+export default function NavBar(props) {
     return <nav>
         <div className="logo-box">
             <img src={logoPath} alt="Logo" />
         </div>
         <div className="nav-links">
-            <a href="#" className='nav-link'>About</a>
-            <a href="#" className='nav-link'>FAQ</a>
-            <a href="#" className='nav-link'>Dashboard</a>
+            <p className="nav-link" onClick={() => props.onLinkClick('about')}>About</p>
+            <p className="nav-link" onClick={() => props.onLinkClick('faq')}>FAQ</p>
+            <p className="nav-link">Dashboard</p>
         </div>
     </nav>;
 }

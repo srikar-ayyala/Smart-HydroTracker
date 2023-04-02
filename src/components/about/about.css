@@ -1,0 +1,28 @@
+.about-section {
+    max-width: 1200px;
+    margin-top: 80px;
+    margin-inline: auto;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.about-section h2 {
+    font-size: 3.5rem;
+    color: var(--main-color-mid)
+}
+
+.about-section h3 {
+    font-size: 2.5rem;
+    color: var(--main-color-mid)
+}
+
+.about-section p {
+    color: var(--bg-color-light);
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 1.5rem;
+}

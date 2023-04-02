@@ -1,31 +1,28 @@
-nav {
+footer {
     display: flex;
-    height: 70px;
+    height: 50px;
     justify-content: space-between;
-    background-color: var(--bg-color-light);
+    background-color: var(--bg-color-dark);
     padding: 8px;
-    position: absolute;
-    width: 100%;
 }
 
-.nav-links {
+.footer-links {
     display: flex;
     gap: 50px;
     align-content: center;
     margin-inline: 10px;
 }
 
-.nav-link {
+.footer-link {
     align-self: center;
 }
 
-.nav-links p {
-    font-size: 1.4rem;
+.footer-links p {
+    font-size: 1.2rem;
     color: var(--main-color-light);
-    z-index: 1;
     cursor: pointer;
 }
 
-nav img {
+footer img {
     height: 100%;
 }

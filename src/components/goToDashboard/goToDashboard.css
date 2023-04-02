@@ -1,0 +1,36 @@
+.go-to-dashboard-section {
+    background-color: var(--main-color-mid);
+    height: 470px;
+    padding: 40px;
+    margin-top: 80px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.go-to-dashboard-section h2 {
+    font-size: 2.5rem;
+    margin-block: 20px;
+    color: white;
+}
+
+.go-to-dashboard-section p {
+    font-size: 1.2rem;
+    color: var(--main-color-light)
+}
+
+.go-to-dashboard-btn {
+    background-color: var(--main-color-light);
+    padding: 20px 35px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--main-color-dark);
+    transition: background-color 0.1s ease-in-out;
+}
+
+.go-to-dashboard-btn:hover {
+    background-color: white;
+}

@@ -3,8 +3,20 @@
     align-items: center;
     justify-content: center;
     height: 700px;
+    position: relative;
+    height: 100vh;
 }
 
-h1 {
-    font-size: 9rem;
+.hero-section h1 {
+    font-size: 9.2rem;
+    font-family: 'Rubik', sans-serif;
+    color: white;
+    color: var(--main-color-mid)
+}
+
+.hero-section img {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    bottom: 10px;
 }
