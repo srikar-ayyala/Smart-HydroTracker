@@ -15,14 +15,17 @@ h1, h2, h3, h4 {
 }
 
 :root {
-    --Accent1-color: #984064;
-    --Accent2-color: #9A6197;
-    --Accent3-color: #8E83C0;
-    --Main1-color: #90E0EF;
-    --Main2-color: #7CC4E9;
-    --Main3-color: #7FA5DB;
+    --Accent-color-1: #984064;
+    --Accent-color-2: #9A6197;
+    --Accent-color-3: #8E83C0;
+    
+    --main-color-light: #EEFCFF;
+    --main-color-mid: #90E0EF;
+    --main-color-dark: #00A8CD;
+    --bg-color-light: #7CC4E9;
+    --bg-color-dark: #7FA5DB;
 }
 
 .main-page {
-    background-color: rgba(175, 238, 238, 0.288);
+    background-color: var(--main-color-light);
 }

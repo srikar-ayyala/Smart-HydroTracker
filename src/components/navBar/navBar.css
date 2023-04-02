@@ -1,8 +1,10 @@
+@import url('../../app.css');
+
 nav {
     display: flex;
     height: 70px;
     justify-content: space-between;
-    background-color: var(--Main2-color);
+    background-color: var(--bg-color-light);
     padding: 8px;
 }
 
@@ -20,8 +22,7 @@ nav {
 a {
     text-decoration: none;
     font-size: 1.4rem;
-    color: white;
-    /* color: var(--Accent2-color); */
+    color: var(--main-color-light);
 }
 
 img {
