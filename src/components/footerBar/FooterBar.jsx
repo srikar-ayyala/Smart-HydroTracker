@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './footerBar.css'
 import logoPath from '../../images/logo.png'
 
@@ -10,7 +11,7 @@ export default function FooterBar(props) {
             <p className="footer-link">Credits</p>
             <p className="footer-link" onClick={() => props.onLinkClick('about')}>About</p>
             <p className="footer-link" onClick={() => props.onLinkClick('faq')}>FAQ</p>
-            <p className="footer-link">Dashboard</p>
+            <Link to={'/dashboard'} className='footer-link' >Dashboard</Link>
         </div>
     </footer>
 }

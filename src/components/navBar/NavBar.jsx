@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import logoPath from '../../images/logo.png'
 import './navBar.css'
 export default function NavBar(props) {
@@ -8,7 +9,7 @@ export default function NavBar(props) {
         <div className="nav-links">
             <p className="nav-link" onClick={() => props.onLinkClick('about')}>About</p>
             <p className="nav-link" onClick={() => props.onLinkClick('faq')}>FAQ</p>
-            <p className="nav-link">Dashboard</p>
+            <Link to={'/dashboard'} className='nav-link' >Dashboard</Link>
         </div>
     </nav>;
 }

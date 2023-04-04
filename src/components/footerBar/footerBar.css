@@ -17,10 +17,11 @@ footer {
     align-self: center;
 }
 
-.footer-links p {
+.footer-links, .footer-links>a {
     font-size: 1.2rem;
     color: var(--main-color-light);
     cursor: pointer;
+    text-decoration: none;
 }
 
 footer img {

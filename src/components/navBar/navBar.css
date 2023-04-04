@@ -12,6 +12,7 @@ nav {
     display: flex;
     gap: 50px;
     align-content: center;
+    justify-content: center;
     margin-inline: 10px;
 }
 
@@ -19,11 +20,12 @@ nav {
     align-self: center;
 }
 
-.nav-links p {
+.nav-links, .nav-links > a{
     font-size: 1.4rem;
     color: var(--main-color-light);
     z-index: 1;
     cursor: pointer;
+    text-decoration: none;
 }
 
 nav img {
