@@ -1,7 +1,9 @@
+import { Link } from 'react-router-dom'
 import './navBarDash.css'
+
 export default function NavBarDash() {
     return <nav className='dashboard-nav'>
-        <p className="logo">IOT HYDROMETER</p>
+        <Link to={'/'} className='logo'>IOT HYDROMETER</Link>
         <div className="user">
             <div className="sign-button sign-out">Sign out</div>
             <div className="user-img">

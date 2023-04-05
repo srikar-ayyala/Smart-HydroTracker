@@ -31,13 +31,13 @@ export default function Dashboard() {
         setCurrDevice(deviceKey);
     }
 
-    // function changeName(deviceKey, newName) {
-    //     // console.log(newName);
-    //     setDeviceList(prevList => prevList.map(preItem => ({
-    //         ...preItem,
-    //         deviceName: preItem.key===deviceKey? newName: preItem.deviceName,
-    //     })))
-    // }
+    function changeDeviceName(deviceKey, newName) {
+        // console.log(newName);
+        setDeviceList(prevList => prevList.map(preItem => ({
+            ...preItem,
+            deviceName: preItem.key===deviceKey? newName: preItem.deviceName,
+        })))
+    }
 
     return <div className="dashboard-page">
         <NavBarDash />
@@ -45,9 +45,9 @@ export default function Dashboard() {
             <SideBar 
             deviceList={deviceList} 
             onClickAddDevice={handleAddDevice} 
-            onClickDeviceDelete={handleRemoveDevice}
+            onClickDelete={handleRemoveDevice}
             onClickDeviceSelect={handleSelectDevice}
-            // changeName={changeName}
+            changeDeviceName={changeDeviceName}
             />
             {
                 currDevice?

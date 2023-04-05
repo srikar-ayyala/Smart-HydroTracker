@@ -128,3 +128,17 @@
 .done-btn:active {
     color: #29a77f;
 }
+
+.rename-input {
+    padding: 4px;
+    background-color: var(--main-color-light);
+    border: 1px var(--main-color-dark) solid;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    color: var(--bg-color-dark);
+}
+
+.rename-input::placeholder {
+    color: var(--main-color-dark);
+
+}
