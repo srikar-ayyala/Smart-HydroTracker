@@ -1,4 +1,4 @@
-nav {
+.main-page-nav {
     display: flex;
     height: 70px;
     justify-content: space-between;
@@ -26,6 +26,10 @@ nav {
     z-index: 1;
     cursor: pointer;
     text-decoration: none;
+}
+
+.nav-link:hover {
+    color: white;
 }
 
 nav img {

@@ -26,6 +26,6 @@ h1, h2, h3, h4 {
     --bg-color-dark: #7FA5DB;
 }
 
-.main-page {
+.home-page {
     background-color: var(--main-color-light);
 }

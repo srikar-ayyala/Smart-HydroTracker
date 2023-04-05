@@ -1,0 +1,130 @@
+.sidebar {
+    flex: 1;
+    min-width: 200px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-right: var(--main-color-mid) 1px solid;
+    padding-inline: 15px;
+}
+
+.device-manager-title {
+    text-align: center;
+    color: var(--main-color-mid);
+    padding-top: 20px;
+    font-size: 1.3rem;
+}
+
+.add-device {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.add-device > input {
+    padding: 8px;
+    width: 100%;
+    background-color: transparent;
+    border: 1px var(--main-color-mid) solid;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: var(--bg-color-dark);
+}
+
+.add-device >input::placeholder {
+    color: var(--bg-color-light);
+}
+
+.add-device > button {
+    height: 40px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid var(--main-color-mid);
+    color: var(--main-color-mid);
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.add-device>button:active {
+    background-color: var(--main-color-mid);
+    color: white;
+}
+
+.device-list {
+    margin-top: 20px;
+    overflow: auto;
+    flex: 1;
+    padding-block: 10px;
+    border-top: 1px solid var(--main-color-mid);
+    border-bottom: 1px solid var(--main-color-mid);
+}
+
+.device-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-property: background-color, color;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in-out;
+    color: #364458;
+    /* color: var(--bg-color-dark); */
+    font-size: 1.1rem;
+    padding-block: 10px;
+}
+
+.device-control {
+    display: none;
+    gap: 10px;
+}
+
+.device-item:hover {
+    background-color: var(--main-color-mid);
+    color: var(--main-color-light);
+}
+
+.device-item:hover > .device-control {
+    display: flex;
+}
+
+.device-item>p {
+    display: flex;
+    align-items: center;
+    max-width: 200px;
+    overflow: auto;
+}
+
+.device-btn {
+    font-size: 1.2rem;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+}
+
+.device-btn:hover {
+    text-decoration: underline;
+}
+
+.rename-btn {
+    color: #5284c9
+}
+.rename-btn:active {
+    color: #275ba3;
+}
+
+.delete-btn {
+    color: #db7f8b;
+}
+.delete-btn:active {
+    color: #f22a45;
+}
+
+.done-btn {
+    color: #52c9a3;
+}
+.done-btn:active {
+    color: #29a77f;
+}

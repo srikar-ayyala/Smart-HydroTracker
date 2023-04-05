@@ -27,7 +27,7 @@ function App() {
   return (
 
 
-    <div className="main-page">
+    <div className="home-page">
         <NavBar onLinkClick = {(section) => scrollTo(section)}/>
         <Hero />
         <About ref={aboutRef}/>

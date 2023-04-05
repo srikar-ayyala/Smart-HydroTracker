@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import logoPath from '../../images/logo.png'
 import './navBar.css'
 export default function NavBar(props) {
-    return <nav>
+    return <nav className='main-page-nav'>
         <div className="logo-box">
             <img src={logoPath} alt="Logo" />
         </div>

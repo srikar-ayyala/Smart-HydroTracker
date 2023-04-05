@@ -24,6 +24,10 @@ footer {
     text-decoration: none;
 }
 
+.footer-link:hover {
+    color: white;
+}
+
 footer img {
     height: 100%;
 }

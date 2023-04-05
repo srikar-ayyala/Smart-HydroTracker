@@ -1,0 +1,10 @@
+.dashboard-page {
+    background-color: var(--main-color-light);
+    position: relative;
+}
+
+.bottom-dash-page {
+    padding-top: 60px;
+    display: flex;
+    height: 100vh;
+}
