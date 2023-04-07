@@ -5,10 +5,21 @@ import Body from "./components/body/Body";
 import NavBarDash from "./components/navBarDash/NavBarDash";
 import './dashboard.css'
 
+let allData = {
+    'test': {
+        dataX: [Date.now(), Date.now()+100000, Date.now()+200000],
+        dataY: [1, 3, 2],
+    },
+}
+
 export default function Dashboard() {
 
-    const [deviceList, setDeviceList] = useState([]);
-    const [currDevice, setCurrDevice] = useState(null);
+    const [deviceList, setDeviceList] = useState([{
+        deviceID: 'test',
+        deviceName: 'test name',
+        key: 1234,
+    }]);
+    const [currDevice, setCurrDevice] = useState(1234);
 
     function handleAddDevice(deviceInput) {
         if(deviceInput === '') return;
@@ -32,13 +43,16 @@ export default function Dashboard() {
     }
 
     function changeDeviceName(deviceKey, newName) {
-        // console.log(newName);
         setDeviceList(prevList => prevList.map(preItem => ({
             ...preItem,
             deviceName: preItem.key===deviceKey? newName: preItem.deviceName,
         })))
     }
-
+    
+    function getCurrDeviceItem() {
+        return deviceList.find(x => x.key === currDevice);
+    }
+    
     return <div className="dashboard-page">
         <NavBarDash />
         <div className="bottom-dash-page">
@@ -52,7 +66,8 @@ export default function Dashboard() {
             {
                 currDevice?
                 <Body 
-                deviceItem={deviceList.find(x => x.key === currDevice)}
+                deviceItem={getCurrDeviceItem()}
+                data = {allData[getCurrDeviceItem().deviceID]}
                 />
                 : <div className="body"><h1>No device selected</h1></div>
             }

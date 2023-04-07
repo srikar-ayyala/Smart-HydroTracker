@@ -1,60 +1,24 @@
 import './body.css'
-import labels from './data';
-import {
-    Chart as ChartJS,
-    CategoryScale,
-    LinearScale,
-    PointElement,
-    LineElement,
-    Title,
-    Tooltip,
-    Legend,
-} from 'chart.js';
-import { Line } from 'react-chartjs-2';
+import Chart from './chart'
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend
-);
-
-export const options = {
-  responsive: true,
-  plugins: {
-    legend: {
-      position: 'top',
-    },
-    title: {
-      display: true,
-      text: "Water level in the past week",
-    }
-  },
-  tension: 0.2,
-};
-export const data = {
-  labels,
-  datasets: [
-    {
-      label: 'Dataset 1',
-      data: labels,
-      borderColor: 'rgb(53, 162, 235)',
-      backgroundColor: 'rgba(53, 162, 235, 0.5)',
-    },
-  ],
+const defaultData = {
+  dataX: [Date.now(), Date.now()+100000, Date.now()+200000, Date.now()+300000, Date.now()+400000, Date.now()+500000, Date.now()+600000, Date.now()+700000, Date.now()+800000, Date.now()+900000],
+  dataY: [5, 2.0, 5, 2.0, 5, 2.0, 5, 2.0, 5, 2.0],
 };
 
 export default function Body(props) {
+  console.log(props.data);
   return <div className="body">
     <div className="device-info-display">
       <h1>{props.deviceItem.deviceName}</h1>
       <p>{props.deviceItem.deviceID}</p>
     </div>
     <div className="chart-box">
-      <Line options={options} data={data} className='graph'/>
+      {
+        (props.data && props.data.dataX && props.data.dataY)?
+        <Chart dataX={props.data.dataX} dataY={props.data.dataY}/>:
+        <Chart dataX={defaultData.dataX} dataY={defaultData.dataY}/>
+      }
     </div>
   </div>
 }
