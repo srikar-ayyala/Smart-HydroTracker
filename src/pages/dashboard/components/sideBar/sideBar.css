@@ -81,8 +81,8 @@
 }
 
 .device-item:hover {
-    background-color: var(--main-color-mid);
-    color: var(--main-color-light);
+    background-color: #baf5ff;
+    color: var(--main-color-dark);
 }
 
 .device-item:hover > .device-control {
