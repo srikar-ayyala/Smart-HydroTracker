@@ -32,6 +32,22 @@
     color: white;
 }
 
+.logo-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 nav img {
     height: 100%;
+}
+
+@media screen and (width <= 455px) {
+    .nav-links, .nav-links > a{
+        font-size: 0.8rem;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
 }

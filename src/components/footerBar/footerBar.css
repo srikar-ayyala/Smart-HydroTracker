@@ -31,3 +31,12 @@ footer {
 footer img {
     height: 100%;
 }
+
+@media screen and (width <= 455px) {
+    .footer-links {
+        gap: 10px;
+    }
+    .footer-links, .footer-links>a {
+        font-size: 0.8rem;
+    }
+}

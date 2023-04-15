@@ -7,7 +7,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 0px;
+    padding: 30px;
+
 }
 
 .faq-section h2 {
@@ -15,6 +17,8 @@
     text-align: center;
     font-size: 3.5rem;
     color: var(--main-color-mid);
+    padding-bottom: 30px;
+    border-bottom: 0.5px solid var(--bg-color-light);
 }
 
 .faq-body {
@@ -27,8 +31,6 @@
     display: flex;
     flex-direction: column;
     border-bottom: 0.5px solid var(--bg-color-light);
-    border-top: 0.5px solid var(--bg-color-light);
-    margin-top: -0.5px;
 }
 
 .question-box {
@@ -54,7 +56,7 @@
 }
 
 .answer {
-    color: var(--bg-color-light);
+    color: transparent;
     font-size: 1.2rem;
     height: 0px;
     overflow: hidden;
@@ -62,6 +64,9 @@
 }
 
 .qna-active .answer {
+    color: var(--bg-color-light);
     height: 70px;
     padding-bottom: 10px;
+    display: flex;
+    align-items: center;
 }

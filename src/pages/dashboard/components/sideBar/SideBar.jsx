@@ -16,7 +16,7 @@ function DeviceItem(props) {
             : <div className="device-control">
             <button className='device-btn rename-btn' onClick={() => props.onClickRename(props.deviceKey)}>Rename</button>
             <button className='device-btn delete-btn' onClick={(e) => props.onClickDelete(e, props.deviceKey)}>Delete</button>
-        </div>
+            </div>
         }
     </div>
 }
@@ -51,21 +51,23 @@ export default function SideBar(props) {
         setDeviceInput('');
     }
     
-    
-    const deviceListElement = props.deviceList.map(x => (
+    const deviceListElement = [];
+    for(let key in props.deviceList) {
+        deviceListElement.push(
         <DeviceItem 
-        key={x.key} 
-        deviceName={x.deviceName} 
-        deviceKey={x.key} 
-        onClickDelete={props.onClickDelete}
-        onClickDeviceSelect={props.onClickDeviceSelect}
-        onClickRename={handleClickRename}
-        onClickDone={handleClickDone}
-        toRename={x.key === toRename}
-        renameInput={renameInput}
-        onChangeRenameInput={handleRenameInput}
+            key={key} 
+            deviceName={props.deviceList[key].deviceName} 
+            deviceKey={key} 
+            onClickDelete={props.onClickDelete}
+            onClickDeviceSelect={props.onClickDeviceSelect}
+            onClickRename={handleClickRename}
+            onClickDone={handleClickDone}
+            toRename={key === toRename}
+            renameInput={renameInput}
+            onChangeRenameInput={handleRenameInput}
         />
-    ));
+        )
+    }
     
     return <div className="sidebar">
         <p className='device-manager-title'>Device manager</p>

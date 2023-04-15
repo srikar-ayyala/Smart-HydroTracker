@@ -1,14 +1,22 @@
 import { Link } from 'react-router-dom'
 import './navBarDash.css'
 
-export default function NavBarDash() {
+export default function NavBarDash(props) {
+    // console.log(props.user && props.user.photoURL);
+
     return <nav className='dashboard-nav'>
-        <Link to={'/'} className='logo'>IOT HYDROMETER</Link>
+        <Link to={'/'} className='logo'>SMART H<sub>2</sub>0 TRACKER</Link>
         <div className="user">
-            <div className="sign-button sign-out">Sign out</div>
-            <div className="user-img">
-                <img src="https://images.pexels.com/photos/1520760/pexels-photo-1520760.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="profile-pic" className='profile-pic'/>
-            </div>
+            {
+                props.user?
+                <>
+                <div className="sign-button sign-out" onClick={props.onClickSignOut}>Sign out</div>
+                <div className="user-img">
+                    <img src={props.user.photoURL} alt="profile-pic" className='profile-pic'/>
+                </div>
+                </>
+                :<div className="sign-button sign-in" onClick={props.onClickSignIn}>Sign in</div>
+            }
         </div>
     </nav>
 }

@@ -40,6 +40,9 @@
     height: 40px;
     width: 50px;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid var(--main-color-mid);
     color: var(--main-color-mid);
     cursor: pointer;
@@ -62,6 +65,8 @@
 
 .device-item {
     display: flex;
+    flex-direction: column;
+    gap: 10px;
     justify-content: space-between;
     padding: 8px;
     border-radius: 5px;
@@ -81,8 +86,8 @@
 }
 
 .device-item:hover {
-    background-color: #baf5ff;
-    color: var(--main-color-dark);
+    background-color: var(--main-color-mid);
+    color: var(--main-color-light);
 }
 
 .device-item:hover > .device-control {
@@ -140,5 +145,20 @@
 
 .rename-input::placeholder {
     color: var(--main-color-dark);
+}
 
+@media screen and (width < 640px) {
+    .sidebar {
+        margin-top: 30px;
+        padding-top: 10px;
+        border-top: var(--main-color-dark) 5px solid;
+    }
+
+    .device-manager-title {
+        font-size: 1.7rem;
+    }
+
+    .add-device > button {
+        font-size: 2rem;
+    }
 }

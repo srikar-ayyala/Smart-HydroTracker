@@ -49,11 +49,28 @@
     z-index: 10;
 }
 
+.sign-button:active {
+    background-color: white;
+}
+
+.sign-in {
+    color: rgb(0, 0, 61);
+}
+
+.sign-in:active {
+    color: black;
+}
+
 .sign-out {
     color: #db7f8b;
 }
 
 .sign-out:hover {
-    background-color: white;
     color: red;
+}
+
+@media screen and (width < 640px) {
+    .sign-button {
+        font-weight: 500;
+    }
 }

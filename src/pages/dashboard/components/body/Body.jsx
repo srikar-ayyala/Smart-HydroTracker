@@ -7,7 +7,6 @@ const defaultData = {
 };
 
 export default function Body(props) {
-  console.log(props.data);
   return <div className="body">
     <div className="device-info-display">
       <h1>{props.deviceItem.deviceName}</h1>
@@ -15,7 +14,7 @@ export default function Body(props) {
     </div>
     <div className="chart-box">
       {
-        (props.data && props.data.dataX && props.data.dataY)?
+        (props.data && props.data.dataX)?
         <Chart dataX={props.data.dataX} dataY={props.data.dataY}/>:
         <Chart dataX={defaultData.dataX} dataY={defaultData.dataY}/>
       }

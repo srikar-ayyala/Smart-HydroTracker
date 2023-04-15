@@ -1,22 +1,116 @@
 .hero-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 700px;
-    position: relative;
-    height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 700px;
+  position: relative;
+  height: 100vh;
 }
 
 .hero-section h1 {
-    font-size: 9.2rem;
-    font-family: 'Rubik', sans-serif;
-    color: white;
-    color: var(--main-color-mid);
+  font-size: 8.5rem;
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
 }
 
 .hero-section img {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    bottom: 10px;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  bottom: 10px;
+}
+
+.behind {
+  position: absolute;
+  z-index: 0;
+  color: #00A8CD;
+}
+
+.waves {
+  background-clip: text;-webkit-background-clip: text;color: transparent;
+  background-repeat:repeat-x;
+  background-position-y: -10px;
+  opacity:1;
+}
+
+.wave1{
+  background-image:url('./Wave.png');
+  animation:wave-x 1s infinite linear, -2s wave-y 5s 1 ease-in-out;
+  z-index: 10;
+}
+
+.wave2{
+  position: absolute;
+  background-image:url('./Wave20000.png');
+  animation:wave-x 2s infinite linear, -2s wave-y 5s 1 ease-in-out;
+  z-index: 9;
+}
+
+.wave3{
+  position: absolute;
+  background-image:url('./Wave30000.png');
+  animation:wave-x 3s infinite linear, -2s wave-y 5s 1 ease-in-out;
+  z-index: 8;
+}
+
+@keyframes wave-x{
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 200px;
+  }
+}
+
+@keyframes wave-y {
+  0% {
+    background-position-y: 500px;
+  }
+  100% {
+    background-position-y: -10px;
+  }
+}
+
+@media screen and (width <= 768px) {
+  .hero-section h1 {
+    font-size: 7rem;
+  }
+}
+
+@media screen and (width <= 640px) {
+  .hero-section h1 {
+    font-size: 6rem;
+  }
+
+  .waves {
+    background-position-y: -30px;
+  }
+
+  @keyframes wave-y {
+    0% {
+      background-position-y: 500px;
+    }
+    100% {
+      background-position-y: -30px;
+    }
+  }
+}
+
+@media screen and (width <= 455px) {
+  .hero-section h1 {
+    font-size: 3rem;
+  }
+
+  .waves {
+    background-position-y: -60px;
+  }
+
+  @keyframes wave-y {
+    0% {
+      background-position-y: 500px;
+    }
+    100% {
+      background-position-y: -60px;
+    }
+  }
 }
