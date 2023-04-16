@@ -2,9 +2,11 @@
 
 This website helps you track the amount of water you have in your tank.
 
-Check out the Working deployed site [here](https://vocal-twilight-45fbbb.netlify.app)!!
-
 ![Gif of Home Page](./assets/Smart%20HydroTracker%20Home%20page%20Gif.gif)
+
+## Live Site :
+
+Check out the deployed site [here](https://vocal-twilight-45fbbb.netlify.app)!!
 
 ## Tech used :
 
