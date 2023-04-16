@@ -2,8 +2,8 @@ import './body.css'
 import Chart from './chart'
 
 const defaultData = {
-  dataX: [Date.now(), Date.now()+100000, Date.now()+200000, Date.now()+300000, Date.now()+400000, Date.now()+500000, Date.now()+600000, Date.now()+700000, Date.now()+800000, Date.now()+900000],
-  dataY: [5, 2.0, 5, 2.0, 5, 2.0, 5, 2.0, 5, 2.0],
+  dataX: [Date.now()+100000, Date.now()+200000, Date.now()+300000, Date.now()+400000, Date.now()+500000, Date.now()+600000],
+  dataY: [0, 3, 0, 3, 0, 3],
 };
 
 export default function Body(props) {

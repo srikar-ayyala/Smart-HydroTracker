@@ -92,6 +92,8 @@
 
 .device-item:hover > .device-control {
     display: flex;
+    /* gap: 30px; */
+    justify-content: end;
 }
 
 .device-item>p {
