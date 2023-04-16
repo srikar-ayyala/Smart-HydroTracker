@@ -30,6 +30,7 @@
     cursor: pointer;
     color: var(--main-color-dark);
     transition: background-color 0.1s ease-in-out;
+    text-decoration: none;
 }
 
 .go-to-dashboard-btn:hover {
