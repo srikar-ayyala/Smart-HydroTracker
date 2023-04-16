@@ -127,7 +127,6 @@ export default function Dashboard() {
         if(user) {
             setUser(auth.currentUser);
             get(ref(db, 'UsersData/' + auth.currentUser.uid)).then((snapshot) => {
-                console.log('userData', snapshot.val());
                 if(snapshot.val()) {
                     setDeviceList(snapshot.val());
                     for(let key in snapshot.val()) {

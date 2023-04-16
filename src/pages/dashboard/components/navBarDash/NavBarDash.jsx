@@ -12,7 +12,7 @@ export default function NavBarDash(props) {
                 <>
                 <div className="sign-button sign-out" onClick={props.onClickSignOut}>Sign out</div>
                 <div className="user-img">
-                    <img src={props.user.photoURL} alt="profile-pic" className='profile-pic' referrerpolicy="no-referrer"/>
+                    <img src={props.user.photoURL} alt="profile-pic" className='profile-pic' referrerPolicy="no-referrer"/>
                 </div>
                 </>
                 :<div className="sign-button sign-in" onClick={props.onClickSignIn}>Sign in</div>
