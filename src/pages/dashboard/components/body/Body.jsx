@@ -14,7 +14,7 @@ export default function Body(props) {
     </div>
     <div className="chart-box">
       {
-        (props.data && props.data.dataX)?
+        (props.data)?
         <Chart dataX={props.data.dataX} dataY={props.data.dataY}/>:
         <Chart dataX={defaultData.dataX} dataY={defaultData.dataY}/>
       }
