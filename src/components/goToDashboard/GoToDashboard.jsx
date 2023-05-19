@@ -1,5 +1,5 @@
-import './goToDashboard.css'
 import { Link } from 'react-router-dom'
+import './goToDashboard.css'
 
 export default function GoToDashboard() {
     return <section className="go-to-dashboard-section">
