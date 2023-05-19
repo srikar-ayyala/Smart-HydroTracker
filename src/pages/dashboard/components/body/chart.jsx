@@ -22,7 +22,7 @@ export default function Chart(props) {
         labels: props.dataX,
         datasets: [
             {
-                label: 'Water level (cm)',
+                label: 'Water level (L)',
                 data: props.dataY,
                 borderColor: 'rgb(53, 162, 235)',
                 backgroundColor: 'rgba(53, 162, 235, 0.5)',
